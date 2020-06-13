@@ -1,0 +1,11 @@
+numpy
+scipy
+Cython
+matplotlib
+nmrglue
+statsmodels
+lmfit
+openbabel
+pathos
+
+PyQT5

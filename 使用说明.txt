@@ -1,0 +1,2 @@
+1. anaconda 下载： https://www.anaconda.com/products/individual#Links
+2. 注意python版本应为3.6+，否则无法安装matplotlib模块
