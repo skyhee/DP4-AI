@@ -1,2 +1,13 @@
 1. anaconda 下载： https://www.anaconda.com/products/individual#Links
 2. 注意python版本应为3.6+，否则无法安装matplotlib模块
+3. OpenBabel安装：https://sourceforge.net/projects/openbabel/files/openbabel/2.3.1/OpenBabel2.3.1_Windows_Installer.exe/download
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#openbabel
+https://download.lfd.uci.edu/pythonlibs/w3jqiv8s/openbabel-3.1.1-cp38-cp38-win_amd64.whl
+https://download.lfd.uci.edu/pythonlibs/w3jqiv8s/openbabel-3.1.1-cp38-cp38-win32.whl
+
+https://sourceforge.net/projects/openbabel/files/openbabel-python/1.7/openbabel-python-1.7.py31.exe/download
+
+conda install -c openbabel openbabel
+
+conda create -n your_env_name python=3.7
+conda install -n your_env_name [package]

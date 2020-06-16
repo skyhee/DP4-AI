@@ -5,7 +5,7 @@ matplotlib
 nmrglue
 statsmodels
 lmfit
-openbabel
+#openbabel
 pathos
 
 PyQT5
