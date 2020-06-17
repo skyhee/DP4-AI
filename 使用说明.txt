@@ -1,13 +1,25 @@
+首次安装使用：
 1. anaconda 下载： https://www.anaconda.com/products/individual#Links
-2. 注意python版本应为3.6+，否则无法安装matplotlib模块
-3. OpenBabel安装：https://sourceforge.net/projects/openbabel/files/openbabel/2.3.1/OpenBabel2.3.1_Windows_Installer.exe/download
-https://www.lfd.uci.edu/~gohlke/pythonlibs/#openbabel
-https://download.lfd.uci.edu/pythonlibs/w3jqiv8s/openbabel-3.1.1-cp38-cp38-win_amd64.whl
-https://download.lfd.uci.edu/pythonlibs/w3jqiv8s/openbabel-3.1.1-cp38-cp38-win32.whl
+2. 配置conda环境变量
+3. copy the following files
+libcrypto-1_1-x64.*
+libssl-1_1-x64.*
+from {your_installed_path}\Library\bin to {your_installed_path}\DLLs.
 
-https://sourceforge.net/projects/openbabel/files/openbabel-python/1.7/openbabel-python-1.7.py31.exe/download
+# 以下是在命令行里输入的指令（打开windows命令行：ctrl + R  然后输入cmd，回车）
+4. conda create -n dp4 python=3.7  # 注意python版本应为3.6+，否则无法安装matplotlib模块
+5. activate dp4  # 此处是激活环境
+6. (1) which pip  # 输出应为 C:\ProgramData\Miniconda3\envs\dp4\Scripts\pip.EXE
+(2) pip install -r requirements.txt
+7. conda install -c openbabel openbabel
+8. conda install -c rdkit rdkit
+9. python PyDP4_GUI.py
+错误：distutils.errors.DistutilsPlatformError: Unable to find vcvarsall.bat
+解决：依赖windows库，目前此依赖包没有支持 python 3.* 版本的，如果当前当前使用的Python 3.*，只能通过安装相应版本的Visual Studio或Visual C++来解决
+（visual studio 下载地址： https://visualstudio.microsoft.com/zh-hans/downloads/， 安装时需要选左侧的“python 开发”, 及右侧的“Python本机开发工具”, 其他不用安装）
 
-conda install -c openbabel openbabel
+非首次安装：
+第一次安装并打开后，下一次再打开的时候直接执行：
+1. activate dp4
+2. python PyDP4_GUI.py # 需要先进入代码目录
 
-conda create -n your_env_name python=3.7
-conda install -n your_env_name [package]
